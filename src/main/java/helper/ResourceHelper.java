@@ -1,7 +1,5 @@
 package helper;
 
-import com.sun.javaws.security.JNLPSignedResourcesHelper;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
