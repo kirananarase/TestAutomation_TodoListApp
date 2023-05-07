@@ -1,8 +1,7 @@
-@regression12
-Feature: Todo Items Management
-  As a User, I want to manage my todo items effectively by adding, editing, deleting,
-  completing, and activating them. Additionally, I want to be able to filter my todos by
-  their completion status.
+@todoitems
+Feature: Todo Items Management As a User I want to manage my todo items effectively by adding editing deleting
+  completing and activating them. Additionally I want to be able to filter my todos by
+  their completion status
 
   Background:
     Given I am on "My Todos" page
@@ -18,13 +17,13 @@ Feature: Todo Items Management
       | todoDetails | addTodoItemCount |
       | Todo Item | 1                  |
 
-#    Scenario: Edit a todo
-#      When I click on the todo item in the todos list
-#      Then I should see the todo details in the textbox
-#      And I should be able to edit the todo details
-#      When I press enter
-#      And I should be able to save the changes
-#      And the updated todo detail should appear in the todos list
+    Scenario: Edit a todo
+      When I click on the todo item in the todos list
+      Then I should see the todo details in the textbox
+      And I should be able to edit the todo details
+      When I press enter
+      And I should be able to save the changes
+      And the updated todo detail should appear in the todos list
 
   Scenario: Delete a todo
     When I click on the "(x)" (Delete) button for a todo
@@ -51,3 +50,4 @@ Feature: Todo Items Management
     When I click on the "Completed" filter tab
     Then I should see only the completed todos in the todo list
     And the number of completed todos in the list should be correct
+    And I should close the browser

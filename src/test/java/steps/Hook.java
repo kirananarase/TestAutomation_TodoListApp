@@ -4,13 +4,13 @@ import base.DriverHandler;
 import com.cucumber.listener.Reporter;
 import com.google.common.io.Files;
 import cucumber.api.Scenario;
+
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
-import helper.LoggerHelper;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -24,13 +24,13 @@ public class Hook{
     }
 
     @Before
-    public void InitiliazeTest(Scenario scenario){
+    public void InitializeTest(Scenario scenario){
         System.out.println("Running Scenario: " + scenario.getName());
         this.scenario = scenario;
         driver = DriverHandler.GetInstanceDriverHandler().getDriver();
     }
 
-    @After
+    @After(order = 1)
     public void TearDownTest(Scenario scenario){
         //Add screenshot
         if(scenario.isFailed()){
@@ -46,6 +46,5 @@ public class Hook{
             } catch (IOException e) {
             }
         }
-
     }
 }

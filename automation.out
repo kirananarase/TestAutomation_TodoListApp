@@ -1,0 +1,33 @@
+2023-05-08 02:05:785 INFO  WaitHelper:23 - 5
+2023-05-08 02:05:180 INFO  ButtonHelper:26 - [[ChromeDriver: chrome on MAC (fe371e64fd05083d958d3aacc228ac7a)] -> id: task]
+2023-05-08 02:05:966 INFO  WaitHelper:23 - 5
+2023-05-08 02:05:53 INFO  ButtonHelper:26 - [[ChromeDriver: chrome on MAC (fe371e64fd05083d958d3aacc228ac7a)] -> class name: todo-name]
+2023-05-08 02:05:919 INFO  WaitHelper:23 - 5
+2023-05-08 02:05:117 INFO  ButtonHelper:26 - [[ChromeDriver: chrome on MAC (fe371e64fd05083d958d3aacc228ac7a)] -> class name: todo-delete]
+2023-05-08 02:05:361 INFO  WaitHelper:23 - 5
+2023-05-08 02:05:413 INFO  Utils:65 - By.xpath: //input[contains(@class,'todo-status')]
+2023-05-08 02:05:435 INFO  Utils:78 - true
+2023-05-08 02:05:585 INFO  Utils:65 - By.xpath: //label[contains(@class,'todo-name')]
+2023-05-08 02:05:648 INFO  Utils:78 - true
+2023-05-08 02:05:792 INFO  WaitHelper:23 - 5
+2023-05-08 02:05:830 INFO  Utils:65 - By.xpath: //input[contains(@class,'todo-status')]
+2023-05-08 02:05:838 INFO  Utils:78 - true
+2023-05-08 02:05:35 INFO  ButtonHelper:26 - [[ChromeDriver: chrome on MAC (fe371e64fd05083d958d3aacc228ac7a)] -> xpath: //a[text()='Active']]
+2023-05-08 02:05:49 INFO  Utils:65 - By.xpath: //label[contains(@class,'todo-name')]
+2023-05-08 02:05:77 INFO  Utils:78 - true
+2023-05-08 02:05:158 INFO  WaitHelper:23 - 5
+2023-05-08 02:05:324 INFO  ButtonHelper:26 - [[ChromeDriver: chrome on MAC (fe371e64fd05083d958d3aacc228ac7a)] -> xpath: //a[text()='Active']]
+2023-05-08 02:05:336 INFO  Utils:65 - By.xpath: //div[contains(@class, 'todo-item')]
+2023-05-08 02:05:347 INFO  Utils:78 - true
+2023-05-08 02:05:400 INFO  Utils:65 - By.xpath: //div[contains(@class, 'todo-item')]
+2023-05-08 02:05:410 INFO  Utils:78 - true
+2023-05-08 02:05:478 INFO  Utils:65 - By.xpath: //div[contains(@class, 'todo-item')]
+2023-05-08 02:05:491 INFO  Utils:78 - true
+2023-05-08 02:05:608 INFO  WaitHelper:23 - 5
+2023-05-08 02:05:774 INFO  ButtonHelper:26 - [[ChromeDriver: chrome on MAC (fe371e64fd05083d958d3aacc228ac7a)] -> xpath: //a[text()='Completed']]
+2023-05-08 02:05:803 INFO  Utils:65 - By.xpath: //div[contains(@class, 'todo-item')]
+2023-05-08 02:05:811 INFO  Utils:78 - true
+2023-05-08 02:05:825 INFO  Utils:65 - By.xpath: //div[contains(@class, 'todo-item')]
+2023-05-08 02:05:833 INFO  Utils:78 - true
+2023-05-08 02:05:859 INFO  Utils:65 - By.xpath: //div[contains(@class, 'todo-item')]
+2023-05-08 02:05:875 INFO  Utils:78 - true

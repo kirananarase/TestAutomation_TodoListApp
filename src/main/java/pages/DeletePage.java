@@ -11,7 +11,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import resources.ConfigFileReader;
 import utils.Utils;
 
 import java.util.ArrayList;
@@ -24,7 +23,6 @@ public class DeletePage {
     ButtonHelper buttonHelper;
     TextBoxHelper textBoxHelper;
     Utils utils;
-    ConfigFileReader configFileReader = new ConfigFileReader();
 
     public DeletePage(WebDriver driver) {
         PageFactory.initElements(driver,this);

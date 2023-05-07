@@ -52,7 +52,4 @@ public class ConfigFileReader implements iConfigReader {
         return Integer.parseInt(properties.getProperty("ExplicitWait"));
     }
 
-    public int getPageLoadTimeOut() {
-        return Integer.parseInt(properties.getProperty("PageLoadTimeOut"));
-    }
 }

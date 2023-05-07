@@ -27,15 +27,6 @@ public class WaitHelper extends ConfigFileReader {
                 .implicitlyWait(timeout, unit == null ? TimeUnit.SECONDS : unit);
     }
 
-    public void waitForElement(WebElement element,int timeOutInSeconds) {
-        WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
-        wait.ignoring(NoSuchElementException.class);
-        wait.ignoring(ElementNotVisibleException.class);
-        wait.ignoring(StaleElementReferenceException.class);
-        wait.pollingEvery(Duration.ofSeconds(getExplicitWait()));
-        wait.until(elementLocated(element));
-    }
-
     private Function<WebDriver, Boolean> elementLocated(final WebElement element) {
         return new Function<WebDriver, Boolean>() {
             @Override
@@ -45,15 +36,15 @@ public class WaitHelper extends ConfigFileReader {
             }
         };
     }
-    public void waitForElementVisible(By locator,int timeOutInSeconds,int pollingEveryInMiliSec) {
+    public void waitForElementVisible(By locator,int timeOutInSeconds) {
         logger.info(locator);
         setImplicitWait(1, TimeUnit.SECONDS);
-        WebDriverWait wait = getWait(timeOutInSeconds, pollingEveryInMiliSec);
+        WebDriverWait wait = getWait(timeOutInSeconds);
         wait.until(ExpectedConditions.visibilityOf(driver.findElement(locator)));
         setImplicitWait(getImplicitWait(), TimeUnit.SECONDS);
     }
 
-    private WebDriverWait getWait(int timeOutInSeconds,int pollingEveryInMiliSec) {
+    private WebDriverWait getWait(int timeOutInSeconds) {
         logger.debug("");
         WebDriverWait wait = new WebDriverWait(driver, timeOutInSeconds);
         wait.pollingEvery(Duration.ofSeconds(getExplicitWait()));

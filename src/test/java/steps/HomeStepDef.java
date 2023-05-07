@@ -72,4 +72,8 @@ public class HomeStepDef {
         homepage.validateUserAbleToSeeExtraItems();
     }
 
+    @And("^I should close the browser$")
+    public void iShouldCloseTheBrowser() {
+        homepage.closeBrowser();
+    }
 }

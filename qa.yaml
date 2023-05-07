@@ -1,0 +1,16 @@
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+  webapi:
+    image: paulalves/todos-webapi:latest
+    depends_on:
+      - mongo
+  webapp:
+    image: paulalves/todos-webapp:latest
+    ports:
+      - 4200:80
+    depends_on:
+      - webapi
+      - mongo

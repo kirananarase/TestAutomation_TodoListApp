@@ -1,15 +1,13 @@
-@regression
-Feature: Todo Items Management
-  As a User, I want to manage my todo items effectively by adding, editing, deleting,
-  completing, and activating them. Additionally, I want to be able to filter my todos by
-  their completion status.
+@multiple_todoitems
+Feature: Todo Items Management As a User I want to manage my todo items effectively by adding editing deleting
+  completing and activating them. Additionally I want to be able to filter my todos by
+  their completion status
 
   Background:
     Given I am on "My Todos" page
 
   Scenario Outline: Add more than 5 todo items
     When I add more than 5 todo items "<todoDetails>", "<addTodoItemCount>"
-      #Then I should be able to enter the todo details "<todoDetails>", "<addTodoItemCount>"
     Then I should be able to see the extra items on the next page "<Next>"
     And I should be able to navigate to the next page "<Next>"
     And I should be able to navigate back to the previous page "<Previous>"
@@ -41,6 +39,7 @@ Feature: Todo Items Management
     And I should be able to navigate to the next page "<Next>"
     And I should be able to navigate back to the previous page "<Previous>"
     And I should see all the added completed todos.
+    And I should close the browser
 
     Examples:
       | Next | Previous |

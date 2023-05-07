@@ -4,17 +4,15 @@ import helper.ButtonHelper;
 import helper.Constants;
 import helper.TextBoxHelper;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
-import resources.ConfigFileReader;
+
 import utils.Utils;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -24,7 +22,6 @@ public class CompletedPage {
     ButtonHelper buttonHelper;
     TextBoxHelper textBoxHelper;
     Utils utils;
-    ConfigFileReader configFileReader = new ConfigFileReader();
 
 
     public CompletedPage(WebDriver driver) {
@@ -45,12 +42,12 @@ public class CompletedPage {
 
     public static By todoItemNames = By.xpath("//label[contains(@class,'todo-name')]");
 
-    public static By allTodoList = By.xpath("/html/body/div/div");
+    public static By allTodoList = By.xpath("//div[contains(@class, 'todo-item')]");
 
     public void clickOnTodoCompleteCheckBox()  {
-        List<WebElement> todoCompleteCB = (List<WebElement>) utils.getElements(todoCompleteCheckBox);
+        List<WebElement> todoCompleteCB = utils.getElements(todoCompleteCheckBox);
         todoCompleteCB.get(0).click();
-        List<WebElement> todoItemListNames = (List<WebElement>) utils.getElements(todoItemNames);
+        List<WebElement> todoItemListNames = utils.getElements(todoItemNames);
         Constants.TODO_NAME = todoItemListNames.get(0).getText();
 
     }
@@ -101,4 +98,19 @@ public class CompletedPage {
             Assert.assertEquals(todoLst.get(i).getAttribute("class").trim(),Constants.TODO_MARKED_COMPLETED_CLASS_NAME);
         }
     }
+
+//    public void validateUserAbleToSeeCompletedExtraItems() {
+//        List<WebElement> todoLst = utils.getElements(allTodoList);
+//        fl count = 8/5;
+//
+//        for(int i=1; i< ;i++){
+//            for(int j=0 ; j<5 ; j++){
+//                Assert.assertEquals(todoLst.get(i).getAttribute("class").trim(),Constants.TODO_MARKED_COMPLETED_CLASS_NAME);
+//            }
+//            if(i > 5){
+//                next click;
+//
+//            }
+//        }
+//    }
 }

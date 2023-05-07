@@ -56,7 +56,6 @@
     </build>
 
     <dependencies>
-
         <dependency>
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
@@ -68,7 +67,6 @@
             <artifactId>cucumber-extentsreport</artifactId>
             <version>3.0.2</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
         <dependency>
@@ -108,7 +106,6 @@
             <artifactId>cucumber-core</artifactId>
             <version>${cucumber.version}</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-picocontainer -->
         <dependency>
